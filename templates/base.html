@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" href="{% static '/css/all.css' %}">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{% static '/css/bootstrap.css' %}">
   <!-- Custom -->
@@ -22,10 +22,10 @@
 <body>
 
 	<!-- Top bar -->
-	{% include 'partials/_topbar.html'%}
+	{% include 'partials/_topbar.html' %}
 
 	<!-- Nav-bar -->
-	{% include 'partials/_navbar.html'%}
+	{% include 'partials/_navbar.html' %}
 
 	<!-- Main content -->
 	{% block content %}
@@ -33,7 +33,7 @@
 	{% endblock %}
 
 	<!-- Footer -->
-	{% include 'partials/_footer.html'%}
+	{% include 'partials/_footer.html' %}
 	
 
  <script src="{% static '/js/jquery-3.3.1.min.js' %}"></script>
