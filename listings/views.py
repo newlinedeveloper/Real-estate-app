@@ -44,7 +44,8 @@ def  search(requests):
 		queryset_list = queryset_list.filter(description_icontains=keywords)
 
 	context ={
-		'listings' : queryset_list
+		'listings' : queryset_list,
+		'values' : requests.GET,
 	}
 
 	return render(requests,'listings/listing.html',context)	
