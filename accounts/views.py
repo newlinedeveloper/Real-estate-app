@@ -29,7 +29,11 @@ def login(requests):
 
 
 def logout(requests):
-	return render(requests,'accounts/logout.html')
+
+	if requests.method == 'POST':
+		auth.logout(requests)
+		messages.success(requests,'you are logged out')
+		return redirect('index')
 
 
 
