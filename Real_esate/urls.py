@@ -9,6 +9,7 @@ urlpatterns = [
 	path('',include('pages.urls')),
 	path('',include('listings.urls')),
 	path('',include('accounts.urls')),
+	path('',include('contacts.urls')),
     path('admin/', admin.site.urls),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
