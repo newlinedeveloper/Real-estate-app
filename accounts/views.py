@@ -8,7 +8,19 @@ def login(requests):
 
 	if requests.method == 'POST':
 		# print('SUBMITTED REG')
+		username = requests.POST['username']
+		password = requests.POST['password']
 
+
+		user = auth.authenticate(usrname = username, password = password)
+
+		if user is not None:
+			auth.login(requests,user)
+			messages.success(requests,'you are logged in')
+			return redirect('login')
+		else:
+			messages.error(requests,"Invalid account")
+			return redirect('login')
 
 		messages.error(requests,'Testing error message')
 		return redirect('login')
